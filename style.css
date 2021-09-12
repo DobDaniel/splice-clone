@@ -1,0 +1,252 @@
+:root {
+    --dark-text-color: #121214;
+    --regular-text-color: #63656d;
+    --light-text-color: #81838a;
+    --lighter-text-color: #a6a8ad;
+    --lightest-text-color: white;
+
+    --border-color: rgb(200, 201, 204);
+
+    --accent-color: #03f;
+
+    --header-background-color: #121214;
+
+    --mainsection-background-color: #fff;
+    --mainsection-other-background-color: #e5e5e8;
+
+    --footer-background-color: #121214;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Inter";
+    /* prettier-ignore */
+    src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+}
+html {
+    font-size: 16px;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: Inter;
+}
+.Header {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    background-color: var(--header-background-color);
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+}
+.HamburgerButton {
+    background-color: inherit;
+    border: none;
+}
+.HamburgerIcon {
+    width: 24px;
+    margin-right: 0.25rem;
+}
+.BrandLogoImage {
+    display: block;
+}
+.BrandLogoText {
+    display: none;
+}
+
+.Brand a {
+    text-decoration: none;
+    color: var(--lighter-text-color);
+}
+.NavBar {
+    display: flex;
+    width: 100%;
+}
+.LinkItem {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LinkList {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.RegisterList {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    white-space: nowrap;
+}
+.RegisterList a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--lighter-text-color);
+}
+.LinkItem a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--lighter-text-color);
+}
+.LogIn {
+    padding: 0.5rem 0;
+}
+.SignUp {
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+.SignUp a {
+    display: inline-flex;
+    color: var(--regular-text-color);
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+}
+.CoverSection {
+    display: flex;
+    justify-content: center;
+}
+.Cover {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/cover.jpg);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    flex: 1 1 50%;
+    width: 100%;
+    width: 1400px;
+    height: 90vh;
+}
+.CoverTitle {
+    color: var(--lightest-text-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+.CoverText {
+    max-width: 370px;
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--lightest-text-color);
+    margin-top: 0;
+}
+.CoverInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    max-width: 1320px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.5rem;
+}
+.CallToAction {
+    background-color: var(--accent-color);
+    color: var(--lightest-text-color);
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.875rem 2rem;
+}
+.CoverFooter {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: linear-gradient(
+        0deg,rgba(10,10,10,.8),rgba(10,10,10,.6) 45%,rgba(10,10,10,0));
+}
+.CoverFooterText{
+    display: flex;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--lightest-text-color);
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+}
+.CoverFooterImage {
+    margin-top: 0.5rem;
+    width: 1rem;
+}
+.CoverFooterImage polygon{
+    stroke: white;
+    stroke-width: 2px;
+}
+.Cookies{
+    position: sticky;
+    bottom: 0;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #303236;
+}
+.CookiesLearn{
+    font-size: 0.875rem;
+    color: white;
+}
+.CookiesButton{
+    white-space: nowrap;
+    font-size: 0.875rem;
+    margin-left: 2rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0.375rem 1rem;
+}
+@media only screen and (min-width: 496px) {
+    .CoverInfo {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+@media only screen and (min-width: 767px) {
+    .LinkList {
+        display: flex;
+    }
+    .Hamburger {
+        display: none;
+    }
+    .CoverTitle {
+        font-size: 4.5rem;
+        font-weight: 900;
+    }
+   .CoverFooter{
+       display: flex;
+   }
+}
+@media only screen and (min-width: 990px) {
+    .BrandLogoText {
+        display: block;
+    }
+    .BrandLogoImage {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1320px) {
+    .CoverInfo {
+        margin: 0 auto;
+    }
+}
