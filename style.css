@@ -45,6 +45,8 @@ body {
     background-color: var(--header-background-color);
     align-items: center;
     padding: 0.625rem 1.25rem;
+    position: sticky;
+    top: 0;
 }
 .HamburgerButton {
     background-color: inherit;
