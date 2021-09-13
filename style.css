@@ -281,54 +281,97 @@ body {
 .CTASmaller {
     padding: 0.5rem 1.25rem;
 }
-.Brands{
+.Brands {
     background-image: url(./images/brand-bg.webp);
     background-size: 100% 100%;
     padding: 2.5rem 0;
 }
-.BrandsWrapper{
+.BrandsWrapper {
     padding: 0 1.5rem;
     max-width: 1320px;
     margin: 0 auto;
 }
 .BrandsText {
-    
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: .1em;
-    color: var(--lightest-text-color)
-    
+    letter-spacing: 0.1em;
+    color: var(--lightest-text-color);
 }
 .BrandsTextItem {
     max-width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-basis: 100%;
-    
 }
 .BrandsItems {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
-.BrandsItem{
+.BrandsItem {
     max-width: 180px;
     padding: 1.25rem;
 }
-.BrandImage{
+.BrandImage {
     max-width: 100%;
+}
+.TestimonialsSection {
+    padding: 7.5rem 0;
+}
+.TestimonialsWrapper {
+    padding: 0 1.5rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.TestimonialsItems {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: flex-start;
+    grid-gap: calc(2rem - 2px);
+}
+.TestimonialItem {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.TestimonialImage {
+    flex: none;
+    max-width: 140px;
+    margin-right: calc(2rem - 2px);
+}
+.TestimonialImage img{
+    max-width: 100%;
+
+}
+.TestimonialsTitle {
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 3.75rem;
+}
+.TestimonialQuote{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
 }
 @media only screen and (min-width: 496px) {
     .CoverInfo {
         padding-left: 4rem;
         padding-right: 4rem;
     }
-    .BrandsWrapper{
+    .BrandsWrapper {
         padding: 0 3.75rem;
-     
+    }
+    .TestimonialsWrapper{
+        padding: 0 3.75rem
+    }
+    .TestimonialImage{
+        max-width: 12em;
     }
 }
 @media only screen and (min-width: 767px) {
@@ -363,10 +406,31 @@ body {
     }
 }
 @media only screen and (min-width: 990px) {
-    .BrandsTextItem{
+    .TestimonialsItems{
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 3.75rem;
+        margin: -1.875rem;
+    }
+    .TestimonialImage{
+        max-width: 100%;
+
+        margin-right: 0;
+    }
+    .TestimonialsTitle{
+        font-size: 2.25rem;
+    }
+    .TestimonialItem{
+        flex-direction: column;
+        align-items: normal;
+        max-width: 360px;
+    }
+    .TestimonialContent{
+        padding-left: 3.75rem;
+    }
+    .BrandsTextItem {
         flex-basis: 10%;
     }
-    .BrandsItems{
+    .BrandsItems {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
