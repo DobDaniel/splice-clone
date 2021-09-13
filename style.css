@@ -254,8 +254,7 @@ body {
 .LeftContentWriting {
     text-align: left;
 }
-.RightContentWriting {
-}
+
 .ContentTitle {
     color: var(--light-text-color);
     font-weight: 700;
@@ -390,10 +389,78 @@ body {
     padding: 0.5rem 1.25rem;
     border-radius: 0.5rem;
     text-decoration: none;
-   
 }
-
+.Footer{
+    background: var(--footer-background-color);
+    padding: 3.75rem 0;
+}
+.FooterWrapper{
+    padding: 0 1.5rem;
+}
+.FooterNav{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: calc(2rem - 2px);
+}
+.FooterHeader{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--lightest-text-color);
+}
+.FooterList{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.FooterLink{
+    padding-top: 0.375rem;
+    padding-bottom: 1.125rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid #303236;
+}
+.FooterLink a{
+    font-size: .875rem;
+    color: var(--lighter-text-color);
+    text-decoration: none;
+}
+.FooterMetaList{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.Copyright{
+    flex-basis: 100%;
+    text-align: center;
+}
+.FooterMetaItem {
+    font-size: .875rem;
+    color: var(--lighter-text-color);
+    margin-right: 0.625rem;
+}
+.FooterMetaItem a{
+    font-size: .875rem;
+    color: var(--lighter-text-color);
+    text-decoration: none;
+}
+.FooterSocial{
+    display:flex;
+    list-style: none;
+    padding: 0;
+}
+.FooterSocialItem{
+    width: 1.25rem;
+    margin-right: 0.625rem;
+}
+.FooterSocialItem svg path{
+    fill: var(--lighter-text-color);
+}
 @media only screen and (min-width: 496px) {
+    .FooterWrapper{
+        padding: 0 3.75rem;
+    }
     .CoverInfo {
         padding-left: 4rem;
         padding-right: 4rem;
@@ -412,6 +479,23 @@ body {
     }
 }
 @media only screen and (min-width: 767px) {
+    .FooterMetaList{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .Copyright{
+        flex-basis: auto;
+        text-align: left;
+    }
+    .FooterLink{
+        text-align: left;
+        padding: 0;
+        border-bottom: none;
+        line-height: 1.375rem;
+    }
+    .FooterNav{
+        grid-template-columns: repeat(2,1fr);
+    }
     .LinkList {
         display: flex;
     }
@@ -443,6 +527,12 @@ body {
     }
 }
 @media only screen and (min-width: 990px) {
+    .FooterMeta{
+        display:flex;
+    }
+    .FooterNav{
+        grid-template-columns: repeat(3,1fr);
+    }
     .TestimonialsItems {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3.75rem;
@@ -492,7 +582,13 @@ body {
         flex-direction: row;
     }
 }
+@media only screen and (min-width: 1200px) {
+.FooterNav{
+    grid-template-columns: repeat(6,1fr);
+}
+}
 @media only screen and (min-width: 1320px) {
+    
     .CoverInfo {
         margin: 0 auto;
     }
