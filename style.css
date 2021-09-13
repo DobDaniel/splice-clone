@@ -345,20 +345,52 @@ body {
     max-width: 140px;
     margin-right: calc(2rem - 2px);
 }
-.TestimonialImage img{
+.TestimonialImage img {
     max-width: 100%;
-
 }
 .TestimonialsTitle {
     font-size: 1.75rem;
     font-weight: 900;
     margin-bottom: 3.75rem;
 }
-.TestimonialQuote{
+.TestimonialQuote {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.625rem;
 }
+.JobsSection {
+    background-image: url(./images/jobs-bg.webp);
+    background-size: 100% 100%;
+    padding: 7.5rem 0;
+}
+.JobsContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.JobsWrapper {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 1320px;
+}
+.JobsText {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--lightest-text-color);
+    margin-right: 1.875rem;
+    text-align: center;
+}
+.JobsButton{
+    background: rgb(18, 83, 255);
+    color: var(--lightest-text-color);
+    border-color: transparent;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+   
+}
+
 @media only screen and (min-width: 496px) {
     .CoverInfo {
         padding-left: 4rem;
@@ -367,11 +399,14 @@ body {
     .BrandsWrapper {
         padding: 0 3.75rem;
     }
-    .TestimonialsWrapper{
-        padding: 0 3.75rem
+    .TestimonialsWrapper {
+        padding: 0 3.75rem;
     }
-    .TestimonialImage{
+    .TestimonialImage {
         max-width: 12em;
+    }
+    .JobsWrapper {
+        padding: 0 3.75rem;
     }
 }
 @media only screen and (min-width: 767px) {
@@ -406,25 +441,25 @@ body {
     }
 }
 @media only screen and (min-width: 990px) {
-    .TestimonialsItems{
-        grid-template-columns: repeat(3,1fr);
+    .TestimonialsItems {
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 3.75rem;
         margin: -1.875rem;
     }
-    .TestimonialImage{
+    .TestimonialImage {
         max-width: 100%;
 
         margin-right: 0;
     }
-    .TestimonialsTitle{
+    .TestimonialsTitle {
         font-size: 2.25rem;
     }
-    .TestimonialItem{
+    .TestimonialItem {
         flex-direction: column;
         align-items: normal;
         max-width: 360px;
     }
-    .TestimonialContent{
+    .TestimonialContent {
         padding-left: 3.75rem;
     }
     .BrandsTextItem {
@@ -449,6 +484,9 @@ body {
     }
     .EvenGrid {
         grid-template-columns: minmax(auto, 720px) minmax(30%, 1fr);
+        flex-direction: row;
+    }
+    .JobsContent{
         flex-direction: row;
     }
 }
