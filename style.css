@@ -164,6 +164,7 @@ body {
     border: 0;
     border-radius: 0.5rem;
     padding: 0.875rem 2rem;
+    text-decoration: none;
 }
 .CoverFooter {
     display: flex;
@@ -359,6 +360,9 @@ body {
     font-weight: 700;
     margin-bottom: 0.625rem;
 }
+.TestimonialAuthor a{
+    text-decoration: none;
+}
 .JobsSection {
     background-image: url(./images/jobs-bg.webp);
     background-size: 100% 100%;
@@ -480,7 +484,7 @@ body {
 }
 @media only screen and (min-width: 767px) {
     .FooterMetaList{
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
     }
     .Copyright{
