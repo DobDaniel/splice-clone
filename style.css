@@ -281,10 +281,54 @@ body {
 .CTASmaller {
     padding: 0.5rem 1.25rem;
 }
+.Brands{
+    background-image: url(./images/brand-bg.webp);
+    background-size: 100% 100%;
+    padding: 2.5rem 0;
+}
+.BrandsWrapper{
+    padding: 0 1.5rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.BrandsText {
+    
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    color: var(--lightest-text-color)
+    
+}
+.BrandsTextItem {
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    
+}
+.BrandsItems {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.BrandsItem{
+    max-width: 180px;
+    padding: 1.25rem;
+}
+.BrandImage{
+    max-width: 100%;
+}
 @media only screen and (min-width: 496px) {
     .CoverInfo {
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+    .BrandsWrapper{
+        padding: 0 3.75rem;
+     
     }
 }
 @media only screen and (min-width: 767px) {
@@ -319,6 +363,13 @@ body {
     }
 }
 @media only screen and (min-width: 990px) {
+    .BrandsTextItem{
+        flex-basis: 0;
+    }
+    .BrandsItems{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
     .BrandLogoText {
         display: block;
     }
