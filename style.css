@@ -12,7 +12,7 @@
     --header-background-color: #121214;
 
     --mainsection-background-color: #fff;
-    --mainsection-other-background-color: #e5e5e8;
+    --mainsection-other-background-color: #fafafb;
 
     --footer-background-color: #121214;
 }
@@ -33,7 +33,6 @@
 }
 html {
     font-size: 16px;
-    overflow-y: hidden;
 }
 
 body {
@@ -173,9 +172,13 @@ body {
     justify-content: center;
     width: 100%;
     background-image: linear-gradient(
-        0deg,rgba(10,10,10,.8),rgba(10,10,10,.6) 45%,rgba(10,10,10,0));
+        0deg,
+        rgba(10, 10, 10, 0.8),
+        rgba(10, 10, 10, 0.6) 45%,
+        rgba(10, 10, 10, 0)
+    );
 }
-.CoverFooterText{
+.CoverFooterText {
     display: flex;
     font-size: 0.875rem;
     font-weight: 700;
@@ -188,11 +191,11 @@ body {
     margin-top: 0.5rem;
     width: 1rem;
 }
-.CoverFooterImage polygon{
+.CoverFooterImage polygon {
     stroke: white;
     stroke-width: 2px;
 }
-.Cookies{
+.Cookies {
     position: sticky;
     bottom: 0;
     padding: 0.75rem 1.25rem;
@@ -202,11 +205,11 @@ body {
     align-items: center;
     background-color: #303236;
 }
-.CookiesLearn{
+.CookiesLearn {
     font-size: 0.875rem;
     color: white;
 }
-.CookiesButton{
+.CookiesButton {
     white-space: nowrap;
     font-size: 0.875rem;
     margin-left: 2rem;
@@ -215,6 +218,68 @@ body {
     border: 1px solid white;
     border-radius: 1rem;
     padding: 0.375rem 1rem;
+}
+
+.MainSection {
+    padding: 7.5rem 0;
+}
+.MainWrapper {
+    margin: 0 auto;
+    padding: 0 3.75rem;
+    max-width: 1320px;
+}
+.MainGrid {
+    display: grid;
+    flex-direction: row;
+    grid-gap: 7.5rem;
+    column-gap: 7.5rem;
+    row-gap: 7.5rem;
+    align-items: center;
+    margin: 0;
+}
+.OddGrid {
+    grid-template-columns: 100%;
+}
+.EvenGrid {
+    grid-template-columns: 100%;
+}
+.OddSection {
+    background-color: var(--mainsection-background-color);
+}
+.EvenSection {
+    background-color: var(--mainsection-other-background-color);
+}
+.LeftContentWriting {
+    text-align: left;
+}
+.RightContentWriting {
+}
+.ContentTitle {
+    color: var(--light-text-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 1.875rem;
+    text-align: right;
+}
+
+.ContentHeading {
+    color: var(--dark-text-color);
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-bottom: 0.625rem;
+}
+
+.ContentText {
+    color: var(--dark-text-color);
+    font-size: 1rem;
+    margin-bottom: 1.875rem;
+}
+
+.ContentImage {
+    max-width: 100%;
+}
+.CTASmaller {
+    padding: 0.5rem 1.25rem;
 }
 @media only screen and (min-width: 496px) {
     .CoverInfo {
@@ -233,9 +298,25 @@ body {
         font-size: 4.5rem;
         font-weight: 900;
     }
-   .CoverFooter{
-       display: flex;
-   }
+    .CoverFooter {
+        display: flex;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 990px) {
+    .OddGrid {
+        grid-template-columns: 2fr 1fr;
+        flex-direction: column;
+    }
+    .EvenGrid {
+        grid-template-columns: 2fr 1fr;
+        flex-direction: column;
+    }
+    .LeftContentImage {
+        grid-column: 1 / span 2;
+    }
+    .RightContentImage {
+        grid-column: 1 / span 2;
+    }
 }
 @media only screen and (min-width: 990px) {
     .BrandLogoText {
@@ -243,6 +324,17 @@ body {
     }
     .BrandLogoImage {
         display: none;
+    }
+    .RightContentWriting {
+        text-align: right;
+    }
+    .OddGrid {
+        grid-template-columns: minmax(30%, 1fr) minmax(auto, 720px);
+        flex-direction: row;
+    }
+    .EvenGrid {
+        grid-template-columns: minmax(auto, 720px) minmax(30%, 1fr);
+        flex-direction: row;
     }
 }
 @media only screen and (min-width: 1320px) {
