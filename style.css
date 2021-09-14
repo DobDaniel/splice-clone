@@ -124,8 +124,8 @@ body {
 .Cover {
     display: flex;
     flex-direction: column;
-    background-image: url(./images/cover.webp), url(./images/cover.jpg);
-    
+    background-image: url(./images/cover.webp);
+
     background-size: cover;
     background-position-y: 50%;
     background-position-x: 50%;
