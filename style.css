@@ -47,7 +47,7 @@ body {
     padding: 0.625rem 1.25rem;
     position: sticky;
     top: 0;
-    z-index : 3;
+    z-index: 3;
 }
 .HamburgerButton {
     background-color: inherit;
@@ -168,7 +168,7 @@ body {
     text-decoration: none;
 }
 .CoverFooter {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 2.5rem;
@@ -401,7 +401,6 @@ body {
 .Footer {
     background: var(--footer-background-color);
     padding: 3.75rem 0;
-    
 }
 .FooterWrapper {
     padding: 0 1.5rem;
@@ -479,11 +478,11 @@ body {
     font-size: 1rem;
     background-color: var(--footer-background-color);
     overflow-y: auto;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
-.SideMenuOverlay{
+.SideMenuOverlay {
     display: none;
-    background-color: hsla(0,0%,100%,.85);
+    background-color: hsla(0, 0%, 100%, 0.85);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -491,15 +490,12 @@ body {
     bottom: 0;
     right: 0;
     z-index: 3;
-
 }
 .SideList {
-    
     width: 250px;
     list-style: none;
     padding-left: 1.25rem;
     margin: 0;
-    
 }
 .SecondSideList {
     list-style: none;
@@ -520,7 +516,7 @@ body {
 .SideSocialItem svg path {
     fill: var(--lighter-text-color);
 }
-.SideSocialItem:hover svg path{
+.SideSocialItem:hover svg path {
     fill: var(--lightest-text-color);
 }
 .SideMenuNav {
@@ -536,27 +532,30 @@ body {
     text-decoration: none;
 }
 .SideLinkItem a:hover {
-    color: var(--lightest-text-color)
+    color: var(--lightest-text-color);
 }
-.SideMeta{
+.SideMeta {
     margin-top: auto;
     padding-left: 1.25rem;
 }
 
-.SideMetaLinks{
+.SideMetaLinks {
     display: flex;
     padding-left: 0;
 }
-.SideMetaLinks a{
+.SideMetaLinks a {
     font-weight: 700;
     color: var(--lightest-text-color);
     font-size: 0.875rem;
 }
 
-.SideCopyright{
+.SideCopyright {
     font-weight: 400;
     color: var(--lighter-text-color);
     font-size: 0.875rem;
+}
+.ContentVideo {
+    max-width: 100%;
 }
 @media only screen and (min-width: 496px) {
     .FooterWrapper {
@@ -580,6 +579,9 @@ body {
     }
 }
 @media only screen and (min-width: 767px) {
+    .CoverFooter {
+        display: flex;
+    }
     .FooterMetaList {
         align-items: center;
         justify-content: flex-start;
