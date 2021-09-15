@@ -57,6 +57,7 @@ body {
     width: 24px;
     margin-right: 0.25rem;
 }
+
 .BrandLogoImage {
     display: block;
 }
@@ -285,6 +286,7 @@ body {
 
 .ContentImage {
     max-width: 100%;
+    height: auto;
 }
 .CTASmaller {
     padding: 0.5rem 1.25rem;
@@ -355,6 +357,7 @@ body {
 }
 .TestimonialImage img {
     max-width: 100%;
+    height: auto;
 }
 .TestimonialsTitle {
     font-size: 1.75rem;
